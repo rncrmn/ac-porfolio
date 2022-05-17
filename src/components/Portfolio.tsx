@@ -32,7 +32,7 @@ const Portfolio: FC = () => {
     console.log(data);
 
     return (
-        <div className="w-full py-6 text-center md:py-10">
+        <div className="w-full py-6">
             <div className="container max-w-6xl px-8 py-4 m-auto md:px-0">
                 <div className="grid grid-cols-1 gap-10 md:grid-cols-2">
                     {data.map((portfolio: Data, index: number) => (
