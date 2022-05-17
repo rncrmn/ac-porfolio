@@ -49,9 +49,9 @@ const Portfolio: FC = () => {
                                     className="group-hover:opacity-20"
                                 />
                             </div>
-                            <div className="absolute top-0 invisible w-full h-full group-hover:visible">
+                            <div className="absolute top-0 invisible w-full h-full group-hover:visible p-6">
                                 <div className="flex flex-col items-center justify-center h-full gap-6">
-                                    <h2 className="font-mono text-4xl font-bold text-white uppercase">
+                                    <h2 className="font-mono text-2xl md:text-4xl font-bold text-white uppercase">
                                         {portfolio.title}
                                     </h2>
                                     <div className="inline-flex gap-2">
