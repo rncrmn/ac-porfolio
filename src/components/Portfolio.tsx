@@ -49,9 +49,9 @@ const Portfolio: FC = () => {
                                     className="group-hover:opacity-20"
                                 />
                             </div>
-                            <div className="absolute top-0 invisible w-full h-full group-hover:visible p-6">
+                            <div className="absolute top-0 invisible w-full h-full p-6 group-hover:visible">
                                 <div className="flex flex-col items-center justify-center h-full gap-6">
-                                    <h2 className="font-mono text-2xl md:text-4xl font-bold text-white uppercase">
+                                    <h2 className="font-mono text-2xl font-bold text-white uppercase md:text-4xl">
                                         {portfolio.title}
                                     </h2>
                                     <div className="inline-flex gap-2">
@@ -63,14 +63,16 @@ const Portfolio: FC = () => {
                                         >
                                             Website
                                         </a>
-                                        <a
-                                            href={portfolio.github}
-                                            rel="noreferrer"
-                                            target="_blank"
-                                            className="font-semibold text-white underline text-md"
-                                        >
-                                            GitHub
-                                        </a>
+                                        {portfolio.github && (
+                                            <a
+                                                href={portfolio.github}
+                                                rel="noreferrer"
+                                                target="_blank"
+                                                className="font-semibold text-white underline text-md"
+                                            >
+                                                GitHub
+                                            </a>
+                                        )}
                                     </div>
                                     <div className="inline-flex gap-2">
                                         {portfolio.tags.map((tag, index) => (
