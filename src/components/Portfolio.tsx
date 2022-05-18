@@ -36,22 +36,19 @@ const Portfolio: FC = () => {
             <div className="container max-w-6xl px-8 py-4 m-auto md:px-0">
                 <div className="grid grid-cols-1 gap-10 md:grid-cols-2">
                     {data.map((portfolio: Data, index: number) => (
-                        <div
-                            className="relative transition ease-in-out delay-150 group"
-                            key={index}
-                        >
-                            <div className="group-hover:bg-gradient-to-r from-teal-400 to-blue-400 opacity-90">
+                        <div className="relative group" key={index}>
+                            <div className="transition duration-500 ease-in-out bg-transparent group-hover:bg-slate-900">
                                 <img
                                     src={urlFor(portfolio.image).url()}
                                     alt="webcourz"
                                     width=""
                                     height=""
-                                    className="group-hover:opacity-20"
+                                    className="transition duration-500 ease-in-out group-hover:opacity-20"
                                 />
                             </div>
-                            <div className="absolute top-0 invisible w-full h-full p-6 group-hover:visible">
+                            <div className="absolute top-0 w-full h-full p-6 transition duration-500 ease-in-out opacity-0 group-hover:opacity-100">
                                 <div className="flex flex-col items-center justify-center h-full gap-6">
-                                    <h2 className="font-mono text-2xl font-bold text-white uppercase md:text-4xl">
+                                    <h2 className="font-mono text-2xl font-bold text-white uppercase md:text-3xl">
                                         {portfolio.title}
                                     </h2>
                                     <div className="inline-flex gap-2">
@@ -77,7 +74,7 @@ const Portfolio: FC = () => {
                                     <div className="inline-flex gap-2">
                                         {portfolio.tags.map((tag, index) => (
                                             <span
-                                                className="bg-green-100 text-green-800 text-xs font-semibold px-2.5 py-0.5 rounded dark:bg-green-200 dark:text-green-900 inline-flex"
+                                                className="bg-green-600 text-white text-xs font-semibold px-2.5 py-0.5 rounded inline-flex"
                                                 key={index}
                                             >
                                                 {tag.label}
