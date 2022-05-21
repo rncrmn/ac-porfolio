@@ -29,8 +29,6 @@ const Portfolio: FC = () => {
         });
     }, []);
 
-    console.log(data);
-
     return (
         <div className="w-full py-6">
             <div className="container max-w-6xl px-8 py-4 m-auto md:px-0">
